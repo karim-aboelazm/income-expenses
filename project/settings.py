@@ -3,8 +3,11 @@ import os
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 SECRET_KEY = 'django-insecure-m7rn=6jmr7lce&ji_i!l-56zkrl!^xvbf56(5^*kd4*msng^2z'
+
 DEBUG = True
+
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -98,18 +101,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 
+
+STATICFILES_DIRS = [
+                os.path.join(BASE_DIR,'static'),
+                os.path.join(BASE_DIR,'media'),
+            ]
+
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 STATIC_ROOT = os.path.join(BASE_DIR,'STATIC_FILES/static/')
 MEDIA_ROOT = os.path.join(BASE_DIR,'STATIC_FILES/media/')
-
-
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "karimaboelazm28@gmail.com"
-EMAIL_HOST_PASSWORD = "kbuspmvoxcnezlqp"
 
  
 # Default primary key field type
